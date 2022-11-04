@@ -37,10 +37,10 @@ public class HepsiBuradaPage {
     @FindBy (xpath = "//div[@class='SearchBoxOld-cHxjyU99nxdIaAbGyX7F']")
     public WebElement aramaButonu;
 
-    @FindBy (xpath = "(//*[text()='Kiwi Bebek Telsizi'])[1]")
-    public WebElement KiwiBebekTelsizi;
+    @FindBy (xpath = "(//*[@data-test-id='product-card-image-container'])[1]")
+    public WebElement MotorolaBebekTelsizi;
 
-    @FindBy (xpath = "//button[@class='button big with-icon']")
+    @FindBy (xpath = "//*[@id='addToCart']")
     public WebElement sepeteEkle;
 
     @FindBy (xpath = "//button[text()='Sepete git']")
@@ -51,6 +51,15 @@ public class HepsiBuradaPage {
 
     @FindBy (xpath = "//span[text()='kadir OKUMUS']")
     public WebElement hesabım;
+
+    @FindBy (xpath = "(//div[@class='_3vX07w_kqpZqSEOOjOvSyI'])[1]")
+    public WebElement googleDevam;
+
+    @FindBy (xpath = "//input[@class='whsOnd zHQkBf']")
+    public WebElement googleSonrasiEmail;
+
+    @FindBy (xpath = "(//*[@jsname='V67aGc'])[2]")
+    public WebElement ileri;
 
 
 }

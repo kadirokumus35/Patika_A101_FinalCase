@@ -23,7 +23,13 @@ public class Driver {
             switch(ConfigReader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions options=new ChromeOptions();
+                    options.addArguments("--disable-blink-features");
+                    options.addArguments("--disable-blink-features=AutomationControlled");
+                    options.addArguments("--disable-extensions");
+                    options.addArguments("--disable-notifications");
+                    WebDriverManager.chromedriver().setup();
+                    driver=new ChromeDriver(options);
                     break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
@@ -33,22 +39,8 @@ public class Driver {
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
                     break;
-                case "headless-chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
-                case "headless-edge": //
-                    WebDriverManager.edgedriver().setup();
-                    driver = new EdgeDriver(new EdgeOptions().setHeadless(true));
-                    break;
                 default:
-                   ChromeOptions options=new ChromeOptions();
-                   options.addArguments("--disable-blink-features");
-                   options.addArguments("--disable-blink-features=AutomationControlled");
-                   options.addArguments("--disable-extensions");
-                   options.addArguments("--disable-notifications");
-                   WebDriverManager.chromedriver().setup();
-                   driver=new ChromeDriver(options);
+
 
             }
 

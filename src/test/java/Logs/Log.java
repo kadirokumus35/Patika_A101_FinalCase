@@ -1,7 +1,8 @@
-package tests;
+package Logs;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tests.UyelikOlusturarakTest;
 import utilities.TestBaseRapor;
 
 public class Log extends TestBaseRapor {
@@ -14,7 +15,7 @@ public class Log extends TestBaseRapor {
         log.info("******************         "+sTestCaseName+" Basladi         ******************");
 
 
-        HepsiBuradaTest.extentTest = HepsiBuradaTest.extentReports.createTest(sTestCaseName);
+        UyelikOlusturarakTest.extentTest = UyelikOlusturarakTest.extentReports.createTest(sTestCaseName);
 
 
 
@@ -22,14 +23,14 @@ public class Log extends TestBaseRapor {
     public static void endTestCase(String sTestCaseName){
         log.info("******************         "+sTestCaseName+" bitti         ******************");
 
-        HepsiBuradaTest.extentTest.info(sTestCaseName);
+        UyelikOlusturarakTest.extentTest.info(sTestCaseName);
     }
 
 
     public static void assertLog(String msg) {
 
         log.info(msg);
-        HepsiBuradaTest.extentTest.pass(msg);
+        UyelikOlusturarakTest.extentTest.pass(msg);
 
     }
 
@@ -37,26 +38,26 @@ public class Log extends TestBaseRapor {
     public static void debug(String message)
     {
         log.debug(message);
-        HepsiBuradaTest.extentTest.debug(message);
+        UyelikOlusturarakTest.extentTest.debug(message);
 
     }
 
 
     public static void error(String message) {
         log.error(message);
-        HepsiBuradaTest.extentTest.error(message);
+        UyelikOlusturarakTest.extentTest.error(message);
 
     }
 
     public static void info(String message) {
 
         log.info(message);
-        HepsiBuradaTest.extentTest.info(message);
+        UyelikOlusturarakTest.extentTest.info(message);
     }
 
     public static void warn(String message) {
         log.warn(message);
-        HepsiBuradaTest.extentTest.warning(message);
+        UyelikOlusturarakTest.extentTest.warning(message);
 
     }
 }
