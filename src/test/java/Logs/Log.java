@@ -1,11 +1,14 @@
 package Logs;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tests.UyelikOlusturarakTest;
 import utilities.TestBaseRapor;
 
 public class Log extends TestBaseRapor {
+
+
 
     private static Logger log= LoggerFactory.getLogger(Log.class.getName());
 
