@@ -12,9 +12,11 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class Driver {
-    private Driver(){
+
+    private Driver() {
 
     }
+
     static WebDriver driver;
 
     public  static WebDriver getDriver(){
@@ -29,7 +31,7 @@ public class Driver {
                     options.addArguments("--disable-extensions");
                     options.addArguments("--disable-notifications");
                     WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver(options);
+                    driver = new ChromeDriver(options);
                     break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
@@ -39,9 +41,14 @@ public class Driver {
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
                     break;
-                default:
-
-
+                case "headless-chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    break;
+                case "headless-edge": //
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver(new EdgeOptions().setHeadless(true));
+                    break;
             }
 
             driver.manage().window().maximize();
@@ -52,7 +59,7 @@ public class Driver {
 
     public static void closeDriver(){
         if(driver!=null) {//driver a deger atanmis
-            //driver.close();
+           // driver.close();
             driver = null;
         }
     }

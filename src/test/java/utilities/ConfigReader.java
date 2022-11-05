@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 
-    public static Properties properties;
+  public static Properties properties;
 
     static{
         String dosyaYolu="configuration.properties";
@@ -23,12 +23,9 @@ public class ConfigReader {
     }
 
     public static String getProperty(String key){
-        /*
-        test methodundan yolladigimiz String key degerini alip
-        Properties classindan getProperty() methodunu kullanarak
-        bu key e ait value u bize getirdi
-         */
+
 
         return properties.getProperty(key);
     }
+
 }

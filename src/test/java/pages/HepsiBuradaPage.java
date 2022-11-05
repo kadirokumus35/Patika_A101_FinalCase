@@ -1,14 +1,10 @@
 package pages;
 
-import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import utilities.ConfigReader;
 import utilities.Driver;
 
-import java.util.Set;
 
 public class HepsiBuradaPage {
 
@@ -76,5 +72,9 @@ public class HepsiBuradaPage {
     @FindBy (xpath = "//*[text()='happycomtr']")
     public WebElement saticiHappycomtr;
 
+    @FindBy (xpath = "(//*[@id='selectedCheckBox'])[1]")
+    public WebElement urunEklendi;
 
+    @FindBy (xpath = "(//*[@id='selectedCheckBox'])[2]")
+    public WebElement ikinciUrunEklendi;
 }

@@ -1,24 +1,17 @@
 package tests;
 
-import Logs.Log;
-import org.openqa.selenium.WindowType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import pages.HepsiBuradaPage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethod;
-import utilities.TestBaseRapor;
 
+import pages.HepsiBuradaPage;
+import utilities.*;
 import java.util.Set;
+
 
 public class UyelikOlusturarakTest extends TestBaseRapor {
 
     HepsiBuradaPage hepsiBurada;
-    Log log;
     ReusableMethod rs;
-
 
     @Test
     public void test01() throws InterruptedException {
@@ -29,25 +22,13 @@ public class UyelikOlusturarakTest extends TestBaseRapor {
        kullaniciIkiFarkliSaticidanUrünSecer();
        kullaniciSepetineGider();
        IkiFarkliSaticidanUrünAldıgınıDogrular();
+       SecilenUrunlerinDogruEklendigiDogrulanir();
 
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public void kullaniciHepsiburadaSitesiniZiyaretEder() {
+    private void kullaniciHepsiburadaSitesiniZiyaretEder() {
         hepsiBurada = new HepsiBuradaPage();
 
         Driver.getDriver().get(ConfigReader.getProperty("anasayfa"));
@@ -55,7 +36,7 @@ public class UyelikOlusturarakTest extends TestBaseRapor {
     }
 
 
-    public void kullaniciGirisIslemiYapar() throws InterruptedException {
+    private void kullaniciGirisIslemiYapar() throws InterruptedException {
 
         hepsiBurada.girisYap.click();
         hepsiBurada.login.click();
@@ -67,19 +48,18 @@ public class UyelikOlusturarakTest extends TestBaseRapor {
         hepsiBurada.sifreSonrasiGirisYap.click();
 
     }
-    public void kullaniciGirisIslemininYapildiginiDogrular() {
+    private void kullaniciGirisIslemininYapildiginiDogrular() {
         String actualHesap = hepsiBurada.hesabım.getText();
-        System.out.println(actualHesap);
         String expectedHesap = "kadir OKUMUS";
         Assert.assertTrue(actualHesap.contains(expectedHesap));
     }
-    public void kullaniciAlmakIstedigiUrünüAratir() {
+    private void kullaniciAlmakIstedigiUrünüAratir() {
         hepsiBurada.aramaCubugu.sendKeys(ConfigReader.getProperty("arananUrun"));
         hepsiBurada.aramaButonu.click();
     }
 
 
-    public void kullaniciIkiFarkliSaticidanUrünSecer() throws InterruptedException {
+    private void kullaniciIkiFarkliSaticidanUrünSecer() throws InterruptedException {
         Thread.sleep(2000);
         hepsiBurada.motorolaBebekTelsizi.click();
         Thread.sleep(2000);
@@ -126,12 +106,12 @@ public class UyelikOlusturarakTest extends TestBaseRapor {
         Thread.sleep(2000);
     }
 
-    public void kullaniciSepetineGider() throws InterruptedException {
+    private void kullaniciSepetineGider() throws InterruptedException {
         hepsiBurada.sepeteGit.click();
         Thread.sleep(2000);
     }
 
-    public void IkiFarkliSaticidanUrünAldıgınıDogrular() {
+    private void IkiFarkliSaticidanUrünAldıgınıDogrular() {
         System.out.println(Driver.getDriver().getTitle());
         String sepetimSayfasindayiz=Driver.getDriver().getTitle();
         String istenenSayfa="Sepetim";
@@ -142,8 +122,15 @@ public class UyelikOlusturarakTest extends TestBaseRapor {
         String saticiIki=hepsiBurada.saticiHappycomtr.getText();
         System.out.println(saticiIki);
         Assert.assertFalse(saticiBir.equals(saticiIki));
-        System.out.println(saticiBir.equals(saticiIki));
+
+
     }
+
+    private void SecilenUrunlerinDogruEklendigiDogrulanir() {
+        Assert.assertTrue(hepsiBurada.urunEklendi.isSelected());
+        Assert.assertTrue(hepsiBurada.ikinciUrunEklendi.isSelected());
+    }
+
 }
 
 
