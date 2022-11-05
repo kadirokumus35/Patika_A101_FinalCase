@@ -4,6 +4,7 @@ import Logs.Log;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HepsiBuradaPage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -44,7 +45,7 @@ Log log;
         hepsiBurada.aramaButonu.click();
 
         Thread.sleep(1000);
-        hepsiBurada.MotorolaBebekTelsizi.click();
+        hepsiBurada.motorolaBebekTelsizi.click();
         Thread.sleep(1000);
 
        String ilkSayfaWindowHandle=Driver.getDriver().getWindowHandle();
@@ -69,8 +70,41 @@ Log log;
 
            hepsiBurada.aramaCubugu.sendKeys(ConfigReader.getProperty("arananUrun"));
             hepsiBurada.aramaButonu.click();
+            Thread.sleep(2000);
+            hepsiBurada.motorolaBebekTelsizi2.click();
+            Thread.sleep(1000);
+        String yeniSayfaWindowHandle=Driver.getDriver().getWindowHandle();
+        Set<String> yeniwindowHandleSeti=Driver.getDriver().getWindowHandles();
 
+        String yeniikinciSayfaWHDegeri="";
+        for (String each:yeniwindowHandleSeti
+        ) {
+            if(!each.equals(ilkSayfaWindowHandle)){
+                yeniikinciSayfaWHDegeri=each;
+            }
         }
+        Driver.getDriver().switchTo().window(yeniikinciSayfaWHDegeri);
+
+        Thread.sleep(1000);
+            hepsiBurada.sepeteEkle.click();
+            Thread.sleep(1000);
+
+            hepsiBurada.sepeteGit.click();
+            Thread.sleep(1000);
+
+        System.out.println(Driver.getDriver().getTitle());
+        String sepetimSayfasindayiz=Driver.getDriver().getTitle();
+        String istenenSayfa="Sepetim";
+        Assert.assertTrue(sepetimSayfasindayiz.equals(istenenSayfa));
+
+String saticiBir=hepsiBurada.saticiCocukIcinHersey.getText();
+        System.out.println(saticiBir);
+String saticiIki=hepsiBurada.saticiHappycomtr.getText();
+        System.out.println(saticiIki);
+Assert.assertFalse(saticiBir.equals(saticiIki));
+        System.out.println(saticiBir.equals(saticiIki));
+
+    }
     }
 
 

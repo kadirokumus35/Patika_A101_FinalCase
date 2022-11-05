@@ -38,7 +38,7 @@ public class HepsiBuradaPage {
     public WebElement aramaButonu;
 
     @FindBy (xpath = "(//*[@data-test-id='product-card-image-container'])[1]")
-    public WebElement MotorolaBebekTelsizi;
+    public WebElement motorolaBebekTelsizi;
 
     @FindBy (xpath = "//*[@id='addToCart']")
     public WebElement sepeteEkle;
@@ -61,5 +61,13 @@ public class HepsiBuradaPage {
     @FindBy (xpath = "(//*[@jsname='V67aGc'])[2]")
     public WebElement ileri;
 
+    @FindBy (xpath = "(//*[@data-test-id='product-card-image-container'])[2]")
+    public WebElement motorolaBebekTelsizi2;
+
+    @FindBy (xpath = "//*[text()='cocukicinhersey']")
+    public WebElement saticiCocukIcinHersey;
+
+    @FindBy (xpath = "//*[text()='happycomtr']")
+    public WebElement saticiHappycomtr;
 
 }
