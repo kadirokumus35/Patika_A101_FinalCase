@@ -16,7 +16,7 @@ public class HepsiburadaTest extends TestBaseRapor {
     JavascriptExecutor js;
     Actions actions;
 
-    @Test
+    @Test(priority = 2)
     public void UyelikOlusturarakTest() throws InterruptedException {
         Log.startTestCase(" *** UYE OLUSTURARAK TEST BASLADİ *** ");
         kullaniciHepsiburadaSitesiniZiyaretEder();
@@ -34,11 +34,11 @@ public class HepsiburadaTest extends TestBaseRapor {
         IkiFarkliSaticidanUrünAldıgınıDogrular();
         Log.info(" iki farkli saticidan urun alindigi dogrulandi ");
         SecilenUrunlerinDogruEklendigiDogrulanir();
-        Log.info(" secilen urunlerin eklendigini dogrulandi");
+        Log.info(" secilen urunlerin eklendigini dogrulandi ");
         Log.endTestCase(" *** UYE OLUSTURARAK TEST BİTTİ *** ");
 
     }
-    @Test
+    @Test(priority = 1)
     public void UyeOlmadanTest() throws InterruptedException {
         Log.startTestCase(" *** UYE OLMADAN TEST BASLADİ *** ");
         kullaniciHepsiburadaSitesiniZiyaretEder();
@@ -53,7 +53,6 @@ public class HepsiburadaTest extends TestBaseRapor {
         Log.info(" iki farkli saticidan urun alindigi dogrulandi ");
         SecilenUrunlerinDogruEklendigiDogrulanir();
         Log.endTestCase(" *** UYE OLMADAN TEST BİTTİ *** ");
-
 
     }
 
@@ -85,13 +84,13 @@ public class HepsiburadaTest extends TestBaseRapor {
         Assert.assertTrue(actualHesap.contains(expectedHesap));
 
     }
-    private void kullaniciAlmakIstedigiUrünüAratirVeBirUrunSecer() throws InterruptedException {
+    private void kullaniciAlmakIstedigiUrünüAratirVeBirUrunSecer() {
         hepsiBurada.aramaCubugu.sendKeys(ConfigReader.getProperty("arananUrun"));
-        Thread.sleep(2000);
+        rs.waitFor(2);
         hepsiBurada.aramaButonu.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
         hepsiBurada.bebekTelsizi.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
 
         String ilkSayfaWindowHandle=Driver.getDriver().getWindowHandle();
         Set<String> windowHandleSeti=Driver.getDriver().getWindowHandles();
@@ -105,24 +104,26 @@ public class HepsiburadaTest extends TestBaseRapor {
         }
         Driver.getDriver().switchTo().window(ikinciSayfaWHDegeri);
 
-        Thread.sleep(2000);
+        rs.waitFor(2);
         hepsiBurada.sepeteEkle.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
 
     }
 
 
-    private void kullaniciFarkliSaticidanUrünSecer() throws InterruptedException {
+    private void kullaniciFarkliSaticidanUrünSecer() {
         hepsiBurada.ekraniKapat.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
         Driver.getDriver().navigate().refresh();
+        rs.waitFor(2);
         hepsiBurada.digerSaticidanUrunEkle.click();
 
     }
 
-    private void kullaniciSepetineGider() throws InterruptedException {
+    private void kullaniciSepetineGider() {
+        rs.waitForVisibility(hepsiBurada.sepeteGit,2000);
         hepsiBurada.sepeteGit.click();
-        Thread.sleep(2000);
+
     }
 
     private void IkiFarkliSaticidanUrünAldıgınıDogrular() {
@@ -145,12 +146,13 @@ public class HepsiburadaTest extends TestBaseRapor {
         Assert.assertTrue(hepsiBurada.ikinciUrunEklendi.isSelected());
     }
 
-    private void UyeOlmadanAlmakIstedigiUrünüAratirVeBirUrunSecer() throws InterruptedException {
+    public void UyeOlmadanAlmakIstedigiUrünüAratirVeBirUrunSecer() {
+        rs.waitForVisibility(hepsiBurada.aramaCubugu,2000);
         hepsiBurada.aramaCubugu.sendKeys(ConfigReader.getProperty("arananUrun"));
         hepsiBurada.aramaButonu.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
         hepsiBurada.bebekTelsizi.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
 
         String ilkSayfaWindowHandle=Driver.getDriver().getWindowHandle();
         Set<String> windowHandleSeti=Driver.getDriver().getWindowHandles();
@@ -164,21 +166,22 @@ public class HepsiburadaTest extends TestBaseRapor {
         }
         Driver.getDriver().switchTo().window(ikinciSayfaWHDegeri);
 
-        Thread.sleep(2000);
+        ReusableMethod.waitForVisibility(hepsiBurada.sepeteEkle,2000);
         hepsiBurada.sepeteEkle.click();
-        Thread.sleep(2000);
+        ReusableMethod.waitFor(2);
     }
 
     private void UyeOlmadanFarkliSaticidanUrünSecer() throws InterruptedException {
         hepsiBurada.ekraniKapat.click();
         Thread.sleep(2000);
         Driver.getDriver().navigate().refresh();
+        Thread.sleep(2000);
         hepsiBurada.digerSaticidanUrunEkle.click();
     }
 
-    private void UyeOlmadanSepetineGider() throws InterruptedException {
+    private void UyeOlmadanSepetineGider() {
         hepsiBurada.sepeteGit.click();
-        Thread.sleep(2000);
+        rs.waitFor(2);
     }
 
 }

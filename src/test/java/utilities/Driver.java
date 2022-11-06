@@ -59,7 +59,7 @@ public class Driver {
 
     public static void closeDriver(){
         if(driver!=null) {//driver a deger atanmis
-           // driver.close();
+            driver.close();
             driver = null;
         }
     }
