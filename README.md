@@ -87,7 +87,15 @@ Java11  ve Maven projesi olusturulup TestNG framework kullanilarak olusturulmust
 <br/>
 
 test case sonunda almis oldugum raporlar ve log kayitlari da asagida eklenmistir
+
+
 ![uye olmadan test](https://user-images.githubusercontent.com/100091154/200200695-fc2f2f24-86d5-40b4-9051-013b4d921d4f.png)
+
+
 ![uye olarak test](https://user-images.githubusercontent.com/100091154/200200701-1af30cdb-7d1b-468c-9279-e36b3e5796f5.png)
+
+
 ![log uye olmadan](https://user-images.githubusercontent.com/100091154/200200839-725a05df-190b-47c5-98f8-726d79c9b96d.png)
+
+
 ![log uye olusturarak](https://user-images.githubusercontent.com/100091154/200200842-8064e2e0-c3b0-4d67-af3c-c4e5d9d761af.png)
