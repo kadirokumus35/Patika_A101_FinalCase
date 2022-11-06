@@ -40,7 +40,7 @@ public class HepsiBuradaPage {
     public WebElement aramaButonu;
 
     @FindBy (xpath = "(//*[@data-test-id='product-card-image-container'])[1]")
-    public WebElement motorolaBebekTelsizi;
+    public WebElement bebekTelsizi;
 
     @FindBy (xpath = "//*[@id='addToCart']")
     public WebElement sepeteEkle;
@@ -66,8 +66,8 @@ public class HepsiBuradaPage {
     @FindBy (xpath = "(//*[@data-test-id='product-card-image-container'])[2]")
     public WebElement motorolaBebekTelsizi2;
 
-    @FindBy (xpath = "//*[text()='cocukicinhersey']")
-    public WebElement saticiCocukIcinHersey;
+    @FindBy (xpath = "//*[text()='rammar']")
+    public WebElement rammar;
 
     @FindBy (xpath = "//*[text()='happycomtr']")
     public WebElement saticiHappycomtr;
@@ -77,4 +77,19 @@ public class HepsiBuradaPage {
 
     @FindBy (xpath = "(//*[@id='selectedCheckBox'])[2]")
     public WebElement ikinciUrunEklendi;
+
+    @FindBy (xpath = "//*[@class='checkoutui-Modal-iHhyy79iR28NvF33vKJb']")
+    public WebElement ekraniKapat;
+
+    @FindBy (xpath = "(//button[@class='add-to-basket button small'])[1]")
+    public WebElement digerSaticidanUrunEkle;
+
+    @FindBy (xpath = "//*[@class='otherBuyOptions']")
+    public WebElement saticilar;
+
+    @FindBy (xpath = "//*[@data-test-class='modal_overflow']")
+    public WebElement basSayfa;
+
+
+
 }

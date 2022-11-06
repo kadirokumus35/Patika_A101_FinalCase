@@ -1,0 +1,20 @@
+2022-11-06 22:57:48 INFO  Utils:112 - [TestNG] Running:
+  C:\Users\büşra\AppData\Local\JetBrains\IdeaIC2021.3\temp-testng-customsuite.xml
+
+2022-11-06 22:57:48 INFO  Log:17 - ******************          *** UYE OLMADAN TEST BASLADİ ***          ******************
+2022-11-06 22:57:49 INFO  WebDriverManager:1093 - Using chromedriver 107.0.5304.62 (resolved driver for Chrome 107)
+2022-11-06 22:57:49 INFO  WebDriverManager:1148 - Exporting webdriver.chrome.driver as C:\Users\büşra\.cache\selenium\chromedriver\win32\107.0.5304.62\chromedriver.exe
+2022-11-06 22:57:49 INFO  WebDriverManager:1093 - Using chromedriver 107.0.5304.62 (resolved driver for Chrome 107)
+2022-11-06 22:57:49 INFO  WebDriverManager:1148 - Exporting webdriver.chrome.driver as C:\Users\büşra\.cache\selenium\chromedriver\win32\107.0.5304.62\chromedriver.exe
+2022-11-06 22:57:54 INFO  Log:56 -  Hepsiburada sitesine gidildi 
+2022-11-06 22:58:04 INFO  Log:56 -  Uye olmadan istedigi urun aratildi 
+2022-11-06 22:58:08 INFO  Log:56 -  farkli bir saticidan da aynı urun secildi 
+2022-11-06 22:58:14 INFO  Log:56 -  sepete gidildi
+2022-11-06 22:58:14 INFO  Log:56 -  iki farkli saticidan urun alindigi dogrulandi 
+2022-11-06 22:58:15 INFO  Log:26 - ******************          *** UYE OLMADAN TEST BİTTİ ***          ******************
+2022-11-06 22:58:15 INFO  Log:17 - ******************          *** UYE OLUSTURARAK TEST BASLADİ ***          ******************
+2022-11-06 22:58:15 INFO  WebDriverManager:1093 - Using chromedriver 107.0.5304.62 (resolved driver for Chrome 107)
+2022-11-06 22:58:15 INFO  WebDriverManager:1148 - Exporting webdriver.chrome.driver as C:\Users\büşra\.cache\selenium\chromedriver\win32\107.0.5304.62\chromedriver.exe
+2022-11-06 22:58:15 INFO  WebDriverManager:1093 - Using chromedriver 107.0.5304.62 (resolved driver for Chrome 107)
+2022-11-06 22:58:15 INFO  WebDriverManager:1148 - Exporting webdriver.chrome.driver as C:\Users\büşra\.cache\selenium\chromedriver\win32\107.0.5304.62\chromedriver.exe
+2022-11-06 22:58:19 INFO  Log:56 -  Hepsiburada sitesine gidildi 
