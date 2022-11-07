@@ -6,13 +6,13 @@ Harika bir deneyim ve birçok kazanim elde ederek Patikali olmanin gururunu her 
 Final Case olarak : 
 
 Gereksinimler
-# Proje Java programlama dilinde yazılmalıdır. Maven repo kullanılmalıdır<br/>
-# Kodlar github üzerinden paylaşılması gereklidir<br/>
-# Yazılacak senaryo için Selenium ve JUnit/Testng kullaılmalıdır<br/>
-# Assertions kullanarak senaryonun doğru çalışırlıgı kontrol edilmelidir<br/>
-# Log kullanılmalıdır<br/>
-# Page object model uygulanmalıdır<br/>
-# OOP prensiplerine uygun geliştirilmelidir<br/>
+#Proje Java programlama dilinde yazılmalıdır. Maven repo kullanılmalıdır<br/>
+#Kodlar github üzerinden paylaşılması gereklidir<br/>
+#Yazılacak senaryo için Selenium ve JUnit/Testng kullaılmalıdır<br/>
+#Assertions kullanarak senaryonun doğru çalışırlıgı kontrol edilmelidir<br/>
+#Log kullanılmalıdır<br/>
+#Page object model uygulanmalıdır<br/>
+#OOP prensiplerine uygun geliştirilmelidir<br/>
 
 simdi de bu gereksinimler isiginda projeyi nasil ayaga kaldirdigimi anlatmaya calisacagim
 
