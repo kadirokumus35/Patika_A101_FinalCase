@@ -6,6 +6,7 @@ Harika bir deneyim ve birçok kazanim elde ederek Patikali olmanin gururunu her 
 Final Case olarak : 
 
 Gereksinimler<br/>
+
 #Proje Java programlama dilinde yazılmalıdır. Maven repo kullanılmalıdır<br/>
 #Kodlar github üzerinden paylaşılması gereklidir<br/>
 #Yazılacak senaryo için Selenium ve JUnit/Testng kullaılmalıdır<br/>
