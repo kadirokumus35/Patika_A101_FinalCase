@@ -5,7 +5,7 @@ Patika.dev A101 Practium projesinde yer aldigim icin cok mutluyum.
 Harika bir deneyim ve birçok kazanim elde ederek Patikali olmanin gururunu her daim yasayacagim.
 Final Case olarak : 
 
-Gereksinimler
+Gereksinimler<br/>
 #Proje Java programlama dilinde yazılmalıdır. Maven repo kullanılmalıdır<br/>
 #Kodlar github üzerinden paylaşılması gereklidir<br/>
 #Yazılacak senaryo için Selenium ve JUnit/Testng kullaılmalıdır<br/>
