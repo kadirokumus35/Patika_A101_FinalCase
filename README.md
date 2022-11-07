@@ -123,4 +123,5 @@ test case sonunda almis oldugum raporlar ve log kayitlari da asagida eklenmistir
 ![log uye olmadan](https://user-images.githubusercontent.com/100091154/200200839-725a05df-190b-47c5-98f8-726d79c9b96d.png)
 
 
-![log uye olusturarak](https://user-images.githubusercontent.com/100091154/200200842-8064e2e0-c3b0-4d67-af3c-c4e5d9d761af.png)
+![log a101](https://user-images.githubusercontent.com/100091154/200279385-f9151c9b-a512-4dc5-b60f-ecff630c64a0.png)
+
